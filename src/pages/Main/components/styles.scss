@@ -1,0 +1,98 @@
+.main {
+	padding: 2.5rem 0;
+}
+
+.wraper {
+	overflow-x: hidden;
+}
+
+.coins-table {
+	max-width: 90vw;
+	margin: 0 auto;
+	table-layout: fixed;
+	border-spacing: 0;
+
+	&__link {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	&__name {
+		font-weight: 600;
+		font-size: 1.05rem;
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+	}
+	&__content {
+		border-bottom: 1px solid #000;
+	}
+	&__name,
+	&__content {
+		background: #24272c;
+		color: #ffff;
+		padding: 1.5rem;
+		text-align: center;
+	}
+
+	&__body {
+		& td:last-child {
+			padding: 1rem;
+		}
+	}
+
+	&__btn {
+		border: none;
+		outline: none;
+		background: transparent;
+		color: #fff;
+		font-size: 2rem;
+		&:hover {
+			cursor: pointer;
+			color: rgba(165, 165, 165, 0.534);
+		}
+		&:active {
+			transition: all 0.2s;
+			-webkit-transition: all 0.2s;
+			-moz-transition: all 0.2s;
+			-ms-transition: all 0.2s;
+			-o-transition: all 0.2s;
+			transform: scale(0.7);
+			-webkit-transform: scale(0.7);
+			-moz-transform: scale(0.7);
+			-ms-transform: scale(0.7);
+			-o-transform: scale(0.7);
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.wraper {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	.coins-table {
+		max-width: 100vw;
+		&__name,
+		&__content {
+			padding: 2rem;
+		}
+
+		&__content {
+			font-size: 1.2rem;
+		}
+		&__header {
+			& th:nth-child(2) {
+				position: sticky;
+				left: -2px;
+				z-index: 100;
+			}
+		}
+		&__body {
+			& td:nth-child(2) {
+				position: sticky;
+				left: -2px;
+				z-index: 100;
+			}
+		}
+	}
+}
