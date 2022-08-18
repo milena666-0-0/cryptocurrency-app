@@ -4,6 +4,7 @@ import * as actions from "../actions/index";
 
 const initialState = {
 	data: [],
+	popular: [],
 	isLoading: false,
 	error: null,
 };
@@ -23,6 +24,11 @@ export const currenciesReducer = handleActions(
 			...state,
 			isLoading: false,
 			error: payload,
+		}),
+		[actions.SET_POPULAR_CURRENCIES]: (state, { payload }) => ({
+			...state,
+			popular: payload,
+			isLoading: false,
 		}),
 	},
 	initialState

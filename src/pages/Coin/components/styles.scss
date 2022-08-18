@@ -1,0 +1,227 @@
+.coin {
+	max-width: 60vw;
+	margin: 1.25rem auto;
+	&__info {
+		margin-bottom: 1rem;
+		padding: 1rem;
+		position: relative;
+		min-height: 20vh;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #fff;
+		font-size: 1.3rem;
+		background-color: #202326;
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.607);
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+	}
+
+	&__btn {
+		border: none;
+		outline: none;
+		font-size: 2rem;
+		margin: 1.5rem 1rem 0 0;
+		background: transparent;
+		color: #ffff;
+		&:hover {
+			cursor: pointer;
+			color: rgba(165, 165, 165, 0.534);
+		}
+		&:active {
+			transition: all 0.2s;
+			-webkit-transition: all 0.2s;
+			-moz-transition: all 0.2s;
+			-ms-transition: all 0.2s;
+			-o-transition: all 0.2s;
+			transform: scale(0.7);
+			-webkit-transform: scale(0.7);
+			-moz-transform: scale(0.7);
+			-ms-transform: scale(0.7);
+			-o-transform: scale(0.7);
+		}
+	}
+
+	&__rank {
+		position: absolute;
+		font-size: 1rem;
+		background-color: #fff;
+		box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.362);
+		font-weight: 700;
+		color: #000;
+		padding: 0.5rem;
+		top: 1rem;
+		left: 1rem;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+	}
+
+	&__wraper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__name {
+		font-weight: 500;
+		margin: 1.5rem 1rem 0 0;
+	}
+	&__price {
+		font-size: 1.7rem;
+		font-weight: 700;
+		margin-top: 1.5rem;
+		max-width: 40%;
+		width: 100%;
+	}
+
+	&__percent--neg {
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		font-size: 0.925rem;
+		margin-top: 1.5rem;
+		background-color: rgb(194, 9, 9);
+		padding: 0.5rem;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		& .arrow {
+			margin-right: 0.25rem;
+			width: 0;
+			height: 0;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 7px solid #ffff;
+		}
+	}
+
+	&__percent--pos {
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		font-size: 0.925rem;
+		margin-top: 1.5rem;
+		background-color: rgb(17, 125, 17);
+		padding: 0.5rem;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		& .arrow {
+			margin-right: 0.25rem;
+			width: 0;
+			height: 0;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-bottom: 7px solid #ffff;
+		}
+	}
+
+	&__content {
+		position: relative;
+		margin-bottom: 0.7rem;
+		min-height: 12vh;
+		max-width: 49%;
+		width: 100%;
+		padding: 1rem;
+		display: flex;
+		justify-content: space-between;
+		color: #fff;
+		font-size: 1.3rem;
+		background-color: #202326;
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.607);
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		&-name {
+			font-weight: 700;
+		}
+		&:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			height: 1px;
+			background: #fff;
+			width: 100%;
+			left: 0;
+			bottom: 1rem;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.coin {
+		max-width: 80vw;
+		&__content {
+			max-width: 100%;
+			width: 100%;
+		}
+
+		&__info {
+			min-height: 15vh;
+		}
+		&__content {
+			min-height: 10vh;
+		}
+
+		&__price {
+			max-width: 30%;
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.coin {
+		max-width: 80vw;
+	}
+}
+
+@media (max-width: 462px) {
+	.coin {
+		max-width: 90vw;
+		&__name {
+			font-size: 1rem;
+			margin-top: 2.5rem;
+		}
+		&__btn,
+		&__percent--neg,
+		&__percent--pos {
+			margin-top: 2.5rem;
+		}
+		&__price {
+			font-size: 1.2rem;
+			margin-top: 0;
+		}
+		&__rank {
+			font-size: 0.8rem;
+		}
+		&__info {
+			flex-direction: column;
+			align-items: flex-start;
+			& .coin__wraper {
+				flex-wrap: nowrap;
+			}
+		}
+		&__content {
+			font-size: 1rem;
+		}
+		&__content {
+			flex-direction: column;
+			&:after {
+				bottom: 0.5rem;
+			}
+		}
+	}
+}

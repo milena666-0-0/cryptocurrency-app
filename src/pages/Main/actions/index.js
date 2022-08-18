@@ -7,3 +7,6 @@ export const GET_ALL_CURRENCIES_SUCCESS = createAction(
 	"GET_ALL_CURRENCIES_SUCCESS"
 );
 export const GET_ALL_CURRENCIES_FAIL = createAction("GET_ALL_CURRENCIES_FAIL");
+
+export const SET_POPULAR_CURRENCIES = createAction("SET_POPULAR_CURRENCIES");
+

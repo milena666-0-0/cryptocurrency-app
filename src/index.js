@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
+import { HeaderContainer } from "./components/Header/containers/HeaderContainer";
 import { CurrenciesContainer } from "./pages/Main/containers/CurrenciesContainer";
 import { CoinContainer } from "./pages/Coin/containers/CoinContainer";
 import { configStore } from "./store/configureStore";
@@ -18,6 +19,7 @@ root.render(
 	<StrictMode>
 		<Provider store={store}>
 			<BrowserRouter>
+				<HeaderContainer />
 				<Router>
 					<CurrenciesContainer />
 					<CoinContainer />

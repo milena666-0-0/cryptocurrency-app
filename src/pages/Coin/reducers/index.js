@@ -4,7 +4,7 @@ import * as actions from "../actions/index";
 
 const initialState = {
 	data: {},
-	history: {},
+	history: [],
 	isLoading: false,
 	error: null,
 };

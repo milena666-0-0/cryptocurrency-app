@@ -1,20 +1,15 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
+import { roundNumb } from "../../../utils/index";
 import { routeNames } from "../../../routes/routeNames";
-import { getCurrenciesData } from "../../../services/coinCap";
 
 import "./styles.scss";
 
-export const CurrenciesLayout = () => {
-	const dispatch = useDispatch();
-	const { data } = useSelector((state) => state.currencies);
-
-	useEffect(() => {
-		dispatch(getCurrenciesData());
-	}, []);
-
+export const CurrenciesLayout = ({
+	data,
+	handleChangeModalOpen,
+	handleSelectCoin,
+}) => {
 	return (
 		<main className="main">
 			<div className="wraper">
@@ -43,7 +38,7 @@ export const CurrenciesLayout = () => {
 									marketCapUsd,
 								} = currency;
 								return (
-									<tr className="coins-table__body">
+									<tr className="coins-table__body" key={id}>
 										<td className="coins-table__content">
 											{rank}
 										</td>
@@ -61,16 +56,20 @@ export const CurrenciesLayout = () => {
 											{symbol}
 										</td>
 										<td className="coins-table__content">
-											{Number(priceUsd).toFixed(5)}
+											${roundNumb(priceUsd, 3)}
 										</td>
 										<td className="coins-table__content">
-											{Number(marketCapUsd).toFixed(5)}
+											${roundNumb(marketCapUsd, 3)}
 										</td>
 										<td className="coins-table__content">
-											{Number(volumeUsd24Hr).toFixed(5)}
+											${roundNumb(volumeUsd24Hr, 3)}
 										</td>
 										<td className="coins-table__content">
 											<button
+												onClick={() => {
+													handleChangeModalOpen();
+													handleSelectCoin(currency);
+												}}
 												className="coins-table__btn"
 												type=""
 											>

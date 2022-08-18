@@ -1,0 +1,116 @@
+.header {
+	padding: 2rem 0;
+	background-color: #202326;
+	min-height: 10vh;
+	.row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #ffff;
+	}
+	&__wraper {
+		display: flex;
+		align-items: center;
+		margin-right: 1.5rem;
+	}
+	// &__wraper:last-child {
+	// 	margin-bottom: 0;
+	// }
+	&__info {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	&__coin-name {
+		display: inline-block;
+		font-weight: 600;
+		margin-right: 1rem;
+	}
+	&__percent--neg {
+		margin-left: 1.6rem;
+		position: relative;
+		font-weight: 600;
+		color: rgb(194, 9, 9);
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -35%;
+			width: 0;
+			height: 0;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 7px solid rgb(194, 9, 9);
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+		}
+	}
+
+	&__percent--pos {
+		margin-left: 1.6rem;
+		position: relative;
+		font-weight: 600;
+		color: rgb(17, 125, 17);
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -35%;
+			width: 0;
+			height: 0;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-bottom: 7px solid rgb(17, 125, 17);
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+		}
+	}
+	&__portfolio {
+		&-value {
+			margin-right: 0.3rem;
+		}
+		&-text {
+			margin-left: 0.3rem;
+			text-decoration: underline;
+		}
+		span {
+			font-weight: 500;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+@media (max-width: 1222px) {
+	.header {
+		&__info {
+			flex-direction: column;
+			align-items: start;
+			& .header__wraper:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__wraper {
+			margin-bottom: 0.5rem;
+		}
+	}
+}
+
+@media (max-width: 648px) {
+	.header {
+		.row {
+			flex-direction: column;
+			align-items: start;
+		}
+		&__portfolio {
+			margin-top: 1rem;
+		}
+	}
+}
