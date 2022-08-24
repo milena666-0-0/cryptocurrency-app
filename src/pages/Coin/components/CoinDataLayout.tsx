@@ -19,7 +19,7 @@ interface ICoinLayoutProps {
 		format: string
 	) => void;
 	handleSetInterval: (index: number) => void;
-};
+}
 
 export const CoinDataLayout: FC<ICoinLayoutProps> = memo(
 	({

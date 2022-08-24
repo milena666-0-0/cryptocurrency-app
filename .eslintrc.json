@@ -12,8 +12,7 @@
 		"plugin:react-hooks/recommended",
 		"plugin:import/warnings",
 		"plugin:import/errors",
-		"plugin:import/typescript",
-		"plugin:prettier/recommended"
+		"plugin:import/typescript"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -32,15 +31,14 @@
 		"spaced-comment": "error",
 		"no-duplicate-imports": "error",
 		"import/extensions": "off",
-		"react/display-name": "off"
+		"react/display-name": "off",
+		"react/prop-types": "off"
 	},
 	"settings": {
 		"import/resolver": {
-			"typescript": {}
-		},
-		"node": {
-			"extensions": [".js", ".jsx", ".ts", ".tsx", "*.ts", "*.tsx"],
-			"moduleDirectory": ["node_modules", "src/", "App.tsx"]
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
 		}
 	}
 }

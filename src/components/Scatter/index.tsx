@@ -18,7 +18,7 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement);
 
 interface IScatterProps {
 	data: ICoinHistory[];
-};
+}
 
 export const LineScatter: FC<IScatterProps> = memo(({ data }) => {
 	const options = {

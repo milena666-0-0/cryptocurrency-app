@@ -32,16 +32,15 @@ export const useModal = (): IUseModal => {
 	const onChange = (e: FormEvent<HTMLInputElement>) => {
 		const targetVal = e.currentTarget.value;
 
-		const rx1: RegExp = /^[0-9]*\.?[0-9]*$/;
-		const rx2: RegExp = /^[A-Za-z]*$/;
+		const rx1 = /^[0-9]*\.?[0-9]*$/;
+		const rx2 = /^[A-Za-z]*$/;
 
 		if (rx1.test(targetVal) || targetVal === "") {
 			setValue(targetVal);
 
 		} else if (rx2.test(targetVal)) {
 			setValue("");
-
-		};
+		}
 	};
 
 	return {

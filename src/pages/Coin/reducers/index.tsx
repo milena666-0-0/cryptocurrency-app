@@ -20,7 +20,7 @@ export const coinReducer = (
 				...state,
 				isLoading: true,
 			};
-		case actions.GET_COIN_DATA_SUCCESS:
+		case actions.GET_COIN_DATA_SUCCESS: {
 			const { data, history } = action.payload;
 
 			return {
@@ -29,6 +29,7 @@ export const coinReducer = (
 				history: history,
 				isLoading: false,
 			};
+		}
 		case actions.GET_COIN_HISTORY_SUCCESS:
 			return {
 				...state,

@@ -12,7 +12,7 @@ import { UPDATE_COINS_DATA, UPDATE_PORTFOLIO } from "../actions/index.tsx";
 
 export const getCurrenciesData =
 	(
-		offset: number = 0
+		offset = 0
 	): ThunkAction<void, RootState, null, CurrenciesAction | PortfolioAction> =>
 	async (dispatch) => {
 		try {
@@ -36,7 +36,7 @@ export const getCurrenciesData =
 export const getCoinData =
 	(
 		coin: ICoinData,
-		interval: string = "m1"
+		interval = "m1"
 	): ThunkAction<void, RootState, null, CoinAction> =>
 	async (dispatch) => {
 		try {

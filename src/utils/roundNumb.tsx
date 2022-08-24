@@ -1,7 +1,7 @@
 export const roundNumb = (
 	num: number,
 	numToFix: number,
-	isPos: boolean = false
+	isPos = false
 ): number => {
 	const changedNum: number = +Number(num).toFixed(numToFix);
 

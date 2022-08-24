@@ -16,7 +16,7 @@ export const portfolioReducer = (
 	action: PortfolioAction
 ): IPortfolioState => {
 	switch (action.type) {
-		case actions.ADD_COIN_TO_PORTFOLIO:
+		case actions.ADD_COIN_TO_PORTFOLIO: {
 			const copy = { ...state.portfolio };
 			const { payload } = action;
 
@@ -63,7 +63,9 @@ export const portfolioReducer = (
 				portfolio: copy,
 				initialPrice: state.initialPrice + initialCoinPrice,
 			};
-		case actions.REMOVE_COIN_FROM_PORTFOLIO:
+		}
+
+		case actions.REMOVE_COIN_FROM_PORTFOLIO: {
 			const portfolioCopy = { ...state.portfolio };
 
 			const initialId = action.payload.split(/\d+/)[0];
@@ -85,12 +87,15 @@ export const portfolioReducer = (
 				portfolio: portfolioCopy,
 				initialPrice: state.initialPrice - initialPrice,
 			};
-		case actions.UPDATE_COINS_DATA:
+		}
+
+		case actions.UPDATE_COINS_DATA: {
 			return {
 				...state,
 				currentCoinsData: action.payload,
 			};
-		case actions.UPDATE_PORTFOLIO:
+		}
+		case actions.UPDATE_PORTFOLIO: {
 			const copiedPortfolio = { ...state.portfolio };
 			const objectKeys = Object.keys(copiedPortfolio);
 
@@ -114,12 +119,15 @@ export const portfolioReducer = (
 				difInUsd,
 				difInPercent,
 			};
-		case actions.SET_ACTIVE_COIN:
+		}
+		case actions.SET_ACTIVE_COIN: {
 			return {
 				...state,
 				selectedCoin: action.payload,
 			};
-		default:
+		}
+		default: {
 			return state;
+		}
 	}
 };

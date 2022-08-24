@@ -10,7 +10,7 @@ interface IPortfolioModalProps {
 	portfolio: IPortfolioState;
 	handleCloseModal: () => void;
 	handleRemoveCoinFromPorfolio: (id: string) => void;
-};
+}
 
 export const PortfolioModalView: FC<IPortfolioModalProps> = memo(
 	({ portfolio, handleCloseModal, handleRemoveCoinFromPorfolio }) => {
