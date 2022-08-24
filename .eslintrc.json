@@ -24,10 +24,6 @@
 		"sourceType": "module"
 	},
 	"plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
-	"prettier": {
-		"singleQuote": true,
-		"printWidth": 100
-	},
 	"rules": {
 		"require-jsdoc": "off",
 		"@typescript-eslint/ban-ts-comment": "off",
