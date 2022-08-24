@@ -32,7 +32,6 @@
 		"spaced-comment": "error",
 		"no-duplicate-imports": "error",
 		"import/extensions": "off",
-		"quotes": ["double", "backtick"],
 		"react/display-name": "off"
 	},
 	"settings": {
