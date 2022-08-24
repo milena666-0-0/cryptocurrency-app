@@ -34,10 +34,15 @@
 		-ms-transform: translateY(-50%);
 		-o-transform: translateY(-50%);
 	}
-	&__coin-name {
+	&__coin-name,
+	&__coin-price {
+		display: inline-block;
 		font-size: 1.2rem;
 		font-weight: 600;
 		margin-top: 0.5rem;
+	}
+	&__coin-price {
+		margin-left: 0.5rem;
 	}
 	&__coin-total {
 		margin-top: 0.5rem;
@@ -130,6 +135,11 @@
 		&__btn {
 			width: 80%;
 			margin-top: 0.7rem;
+		}
+		&__coin-name,
+		&__coin-price,
+		&__coin-total {
+			font-size: 1rem;
 		}
 	}
 }

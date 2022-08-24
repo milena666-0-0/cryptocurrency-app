@@ -158,6 +158,46 @@
 			bottom: 1rem;
 		}
 	}
+	&__intervals {
+		display: flex;
+		justify-content: flex-end;
+		& > div:last-child {
+			margin-right: 0;
+		}
+	}
+	&__interval {
+		background: #fff;
+		padding: 0.7rem;
+		font-weight: 600;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		margin: 0.5rem 0.5rem 0.5rem 0;
+		&:hover {
+			cursor: pointer;
+			background: rgba(118, 118, 118, 0.371);
+			color: #fff;
+		}
+	}
+	&__interval--active {
+		padding: 0.7rem;
+		font-weight: 600;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		margin: 0.5rem 0.5rem 0.5rem 0;
+		background: rgba(199, 199, 199, 0.371);
+		color: #fff;
+		transform: scale(0.9);
+		-webkit-transform: scale(0.9);
+		-moz-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+		-o-transform: scale(0.9);
+	}
 }
 
 @media (max-width: 1024px) {
@@ -185,6 +225,15 @@
 @media (max-width: 768px) {
 	.coin {
 		max-width: 80vw;
+	}
+}
+
+@media (max-width: 590px) {
+	.coin {
+		&__intervals {
+			flex-wrap: wrap;
+			justify-content: start;
+		}
 	}
 }
 

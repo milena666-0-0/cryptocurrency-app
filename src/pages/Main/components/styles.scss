@@ -3,12 +3,12 @@
 }
 
 .wraper {
+	min-height: 100vh;
 	overflow-x: hidden;
 }
 
 .coins-table {
 	max-width: 90vw;
-	min-height: 100vh;
 	margin: 0 auto;
 	table-layout: fixed;
 	border-spacing: 0;
@@ -51,7 +51,7 @@
 			cursor: pointer;
 			color: rgba(165, 165, 165, 0.534);
 		}
-		&:active {
+		&:enabled:active {
 			transition: all 0.2s;
 			-webkit-transition: all 0.2s;
 			-moz-transition: all 0.2s;

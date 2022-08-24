@@ -40,7 +40,7 @@
 			cursor: pointer;
 			opacity: 0.5;
 		}
-		&:active {
+		&:enabled:active {
 			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.44);
 			transform: scale(0.9);
 			-webkit-transform: scale(0.9);
